@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<!-- web.html - Pagina Web - Sostenibilità del Gruppo BF / Bonifiche Ferraresi
+     Progetto per il corso di Tecnologie Web
+     Autore: Christian Valese
+     Numero Matricola: 0312302063
+     Tema n.3 - Tecnologia web per la sostenibilità d'impresa
+     Traccia n.17 - Sviluppo di una pagina web per il download dei report di sostenibilità di un'impresa del settore primario -->
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gruppo BF - Bonifiche Ferraresi | Sostenibilità</title>
+
+    <!-- Google Fonts - ho scelto Merriweather per i titoli e Source Sans per il corpo -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Collegamento al foglio di stile esterno -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER
+         L'header ha un'immagine di sfondo con un overlay 
+         verde semitrasparente sopra, cosi il testo si legge bene.
+         Ho usato linear-gradient con rgba per fare l'overlay -->
+    <header>
+        <div class="logo-area">
+            <h2>Gruppo BF S.p.A.</h2>
+        </div>
+        <h1>Bonifiche Ferraresi</h1>
+        <p class="sottotitolo">
+            Dal seme alla tavola: innovazione agricola e sostenibilità 
+            al servizio della filiera agroalimentare italiana dal 1871.
+        </p>
+    </header>
+
+    <!-- NAVBAR
+         Barra di navigazione che resta fissa in alto
+         quando si scrolla (position sticky).
+         I link li allineo con flexbox -->
+    <nav>
+        <ul>
+            <li><a href="#chi-siamo">Chi Siamo</a></li>
+            <li><a href="#sostenibilita">Sostenibilità</a></li>
+            <li><a href="#numeri">Numeri</a></li>
+            <li><a href="#tappe">Tappe</a></li>
+            <li><a href="#report">Report</a></li>
+        </ul>
+    </nav>
+
+    <!-- CHI SIAMO - Griglia informativa
+         Uso CSS Grid per fare una griglia 2x2 con le
+         card informative sull'azienda -->
+    <section id="chi-siamo" class="sezione">
+        <h2>Chi Siamo</h2>
+        <p>
+            Il Gruppo BF, tramite la controllata Bonifiche Ferraresi, rappresenta 
+            la più grande azienda agricola italiana per superficie coltivata. Con oltre 
+            7.500 ettari di Superficie Agricola Utilizzata distribuiti tra Emilia-Romagna, 
+            Toscana e Sardegna, il Gruppo opera lungo l'intera filiera agroalimentare: 
+            dalla selezione delle sementi alla produzione agricola, fino alla trasformazione 
+            e commercializzazione dei prodotti alimentari con il marchio "Le Stagioni d'Italia".
+        </p>
+        <p>
+            Nata nel 1871 a Londra come <em>Ferrarese Land Reclamation Company</em> 
+            con la missione di bonificare i terreni della provincia di Ferrara, l'azienda 
+            ha attraversato oltre 150 anni di storia, trasformandosi da operatore agricolo 
+            tradizionale a polo agroindustriale innovativo, quotato in Borsa Italiana.
+        </p>
+
+        <!-- Griglia 2x2 con le info principali dell'azienda -->
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>&#127793; Settore Primario</h3>
+                <p>
+                    Coltivazioni di riso, grano duro e tenero, mais, orzo, 
+                    barbabietola da zucchero, soia, girasole, erba medica, 
+                    piante officinali, orticole e frutta.
+                </p>
+            </div>
+            <div class="info-card">
+                <h3>&#127981; Filiera Integrata</h3>
+                <p>
+                    Dalla selezione dei semi (SIS) alla distribuzione 
+                    attraverso Consorzi Agrari d'Italia, passando per la 
+                    trasformazione industriale (BIA, Pastificio Fabianelli).
+                </p>
+            </div>
+            <div class="info-card">
+                <h3>&#128205; Sedi Operative</h3>
+                <p>
+                    Sede principale a Jolanda di Savoia (FE). Terreni agricoli 
+                    in provincia di Ferrara, Arezzo, Grosseto, Bologna e Oristano.
+                </p>
+            </div>
+            <div class="info-card">
+                <h3>&#128200; Dati Finanziari</h3>
+                <p>
+                    Valore della produzione consolidato 2024 pari a 1,505 
+                    miliardi di euro, in crescita del 8,5% rispetto al 2023. 
+                    EBITDA a 100 milioni (+33%).
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PILASTRI DELLA SOSTENIBILITA'
+         Tre card affiancate con flexbox, una per ogni 
+         pilastro ESG (Ambiente, Sociale, Governance) -->
+    <section id="sostenibilita" class="sezione-colorata">
+        <div class="sezione">
+            <h2>Impegno per la Sostenibilità</h2>
+            <p>
+                Il Gruppo BF integra la sostenibilità nella propria strategia aziendale, 
+                con un Piano Strategico di Sostenibilità 2023-2027 che si articola su 
+                cinque priorità, allineate agli Obiettivi di Sviluppo Sostenibile (SDGs) 
+                dell'Agenda 2030 delle Nazioni Unite.
+            </p>
+            <p>
+                La rendicontazione di sostenibilità è redatta secondo i GRI Standards 
+                e, a partire dal 2024, in conformità agli European Sustainability 
+                Reporting Standards (ESRS) introdotti dalla direttiva CSRD.
+            </p>
+
+            <!-- I tre pilastri ESG disposti con flexbox -->
+            <div class="pilastri-container">
+                <div class="pilastro">
+                    <div class="icona">&#127807;</div>
+                    <h3>Ambiente</h3>
+                    <p>
+                        Agricoltura di precisione, riduzione delle emissioni, 
+                        efficienza idrica e tutela della biodiversità nei terreni 
+                        coltivati. Avvio del calcolo della Carbon Footprint 
+                        completa (Scope 1, 2 e 3).
+                    </p>
+                </div>
+                <div class="pilastro">
+                    <div class="icona">&#129309;</div>
+                    <h3>Sociale</h3>
+                    <p>
+                        Sicurezza sul lavoro, formazione continua dei dipendenti, 
+                        attenzione al welfare aziendale e valorizzazione delle 
+                        comunità rurali nei territori in cui opera il Gruppo.
+                    </p>
+                </div>
+                <div class="pilastro">
+                    <div class="icona">&#9878;</div>
+                    <h3>Governance</h3>
+                    <p>
+                        Codice etico, modello organizzativo ex D.Lgs. 231/2001, 
+                        gestione dei rischi (ERM) e trasparenza nella comunicazione 
+                        verso tutti gli stakeholder.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUMERI CHIAVE
+         Griglia 4 colonne con i dati principali.
+         Ho usato grid perche cosi posso cambiare facilmente 
+         il numero di colonne nel responsive -->
+    <section id="numeri" class="sezione">
+        <h2>Numeri Chiave</h2>
+        <p>
+            I dati più significativi del Gruppo BF, che evidenziano la dimensione 
+            e l'impegno dell'azienda nel settore agroalimentare italiano.
+        </p>
+
+        <div class="numeri-grid">
+            <div class="numero-box">
+                <span class="valore">7.546</span>
+                <span class="etichetta">Ettari di SAU</span>
+            </div>
+            <div class="numero-box">
+                <span class="valore">1,5 Mld</span>
+                <span class="etichetta">Fatturato 2024 (€)</span>
+            </div>
+            <div class="numero-box">
+                <span class="valore">150+</span>
+                <span class="etichetta">Anni di storia</span>
+            </div>
+            <div class="numero-box">
+                <span class="valore">5</span>
+                <span class="etichetta">Business Unit</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIMELINE
+         Per mostrare le tappe del percorso di sostenibilita'.
+         La linea verticale la faccio con ::before sul container,
+         i pallini con ::before su ogni item -->
+    <section id="tappe" class="sezione-colorata">
+        <div class="sezione">
+            <h2>Percorso di Sostenibilità</h2>
+            <p>
+                Le tappe fondamentali che hanno segnato il cammino del Gruppo BF 
+                verso un modello di sviluppo agricolo sempre più responsabile.
+            </p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="anno">2018</span>
+                    <p>
+                        Primo Bilancio di Sostenibilità volontario del Gruppo BF, 
+                        redatto secondo i GRI Standards. Inizio del percorso di 
+                        rendicontazione strutturata.
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <span class="anno">2019</span>
+                    <p>
+                        Approvazione del Codice Etico del Gruppo e introduzione del 
+                        Modello Organizzativo ex D.Lgs. 231/2001 per la prevenzione 
+                        dei reati.
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <span class="anno">2020</span>
+                    <p>
+                        Pubblicazione del Bilancio di Sostenibilità "Dal seme alla tavola". 
+                        Acquisizione di terreni in Sardegna e Toscana per ampliare la SAU.
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <span class="anno">2023</span>
+                    <p>
+                        Lancio del Piano Strategico di Sostenibilità 2023-2027 con cinque 
+                        priorità. Adozione del GRI 13 Agriculture, Aquaculture and Fishing 
+                        come riferimento settoriale.
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <span class="anno">2024</span>
+                    <p>
+                        Prima Rendicontazione di Sostenibilità conforme agli ESRS 
+                        europei (direttiva CSRD). Avvio del calcolo completo della 
+                        Carbon Footprint aziendale.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOWNLOAD REPORT
+         Questa e' la parte piu importante del sito.
+         Ogni report e' una riga con icona PDF, info e 
+         bottone di download. Ho usato flexbox per allinearli -->
+    <section id="report" class="sezione">
+        <h2>Scarica i Report di Sostenibilità</h2>
+        <p>
+            Di seguito sono disponibili i documenti di rendicontazione ESG 
+            pubblicati dal Gruppo BF nel corso degli anni. Tutti i file sono 
+            in formato PDF e liberamente scaricabili.
+        </p>
+
+        <div class="report-lista">
+
+            <!-- Report 2024 - conforme ai nuovi standard ESRS -->
+            <div class="report-item">
+                <div class="icona-pdf">PDF</div>
+                <div class="report-info">
+                    <h3>Annual Report 2024 — Rendicontazione di Sostenibilità</h3>
+                    <p>Relazione finanziaria consolidata e rendicontazione di sostenibilità conforme agli ESRS.</p>
+                </div>
+                <a href="https://www.bfspa.it/files/02876/1bfannualreport2024v.300425finaleopinion.pdf" 
+                   class="btn-download" target="_blank" rel="noopener">
+                    Scarica
+                </a>
+            </div>
+
+            <!-- DNF 2023 - Dichiarazione Non Finanziaria D.Lgs 254/2016 -->
+            <div class="report-item">
+                <div class="icona-pdf">PDF</div>
+                <div class="report-info">
+                    <h3>Dichiarazione Non Finanziaria 2023</h3>
+                    <p>DNF ai sensi del D.Lgs. 254/2016, redatta "with reference to" i GRI Standards.</p>
+                </div>
+                <a href="https://www.bfspa.it/files/02286/gruppobfdnf2023.pdf" 
+                   class="btn-download" target="_blank" rel="noopener">
+                    Scarica
+                </a>
+            </div>
+
+            <!-- Bilancio Sostenibilità 2020 - secondo bilancio volontario -->
+            <div class="report-item">
+                <div class="icona-pdf">PDF</div>
+                <div class="report-info">
+                    <h3>Bilancio di Sostenibilità 2020</h3>
+                    <p>"Dal seme alla tavola" — secondo Bilancio volontario del Gruppo BF secondo i GRI Standards.</p>
+                </div>
+                <a href="https://www.bfspa.it/files/00232/bilanciosostenibilita2020.pdf" 
+                   class="btn-download" target="_blank" rel="noopener">
+                    Scarica
+                </a>
+            </div>
+        </div>
+
+        <!-- Nota in fondo alla sezione report -->
+        <p class="nota-fonti">
+            <em>
+                Tutti i documenti sono pubblicati da B.F. S.p.A. e sono consultabili 
+                anche sul sito ufficiale 
+                <a href="https://www.bfspa.it/it/il-gruppo/sostenibilita" target="_blank">
+                    bfspa.it
+                </a>.
+            </em>
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            Pagina realizzata per il Project Work — CdS Informatica per le Aziende Digitali (L-31)
+        </p>
+        <p>
+            Università Telematica Pegaso &mdash; A.A. 2024/2025
+        </p>
+        <p>
+            Fonte dati: 
+            <a href="https://www.bfspa.it" target="_blank">www.bfspa.it</a>
+        </p>
+    </footer>
+
+</body>
+</html>
